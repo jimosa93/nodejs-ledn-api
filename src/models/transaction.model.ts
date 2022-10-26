@@ -1,6 +1,6 @@
 import { prop, getModelForClass, modelOptions } from '@typegoose/typegoose';
 
-enum Type {
+export enum Type {
     RECEIVE = 'receive',
     SEND = 'send'
 }
@@ -17,8 +17,8 @@ class Transaction {
     @prop({ required: true, type: Number })
     amount: number
 
-    @prop({ required: true, enum: Type })
-    type: Type[]
+    @prop({ required: true, enum: Type, type: String })
+    type: Type
 }
 
 const TransactionModel = getModelForClass(Transaction);
