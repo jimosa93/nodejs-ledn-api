@@ -4,6 +4,7 @@ import AccountModel from '../models/account.model';
 
 export const createTransaction = async (req: Request, res: Response) => {
     const { userEmail, amount, type } = req.body;
+    if(!(userEmail && amount && type)) res.status(400).json({ message: "userEmail, amount and type are required" });
     try {
         const account = await AccountModel.findOne({ userEmail });
         if (!account) return res.status(404).json({ message: "Not account found" });

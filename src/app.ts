@@ -8,6 +8,6 @@ app.use(express.json());
 
 app.use('/account', accountRoutes)
 app.use('/transaction', transactiontRoutes)
-app.use("/", (req: Request, res: Response) => res.json({message: 'something'}));
+app.use("/", (req: Request, res: Response) => res.json({message: 'Welcome to LEDN API'}));
 
 export default app;

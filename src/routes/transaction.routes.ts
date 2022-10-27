@@ -3,7 +3,6 @@ import { createTransaction } from '../controllers/transaction.controller';
 
 const router = Router();
 
-router.put('/send', createTransaction);
-router.put('/receive', createTransaction);
+router.post('/', createTransaction);
 
 export default router; 

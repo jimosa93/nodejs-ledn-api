@@ -1,17 +1,24 @@
 {
   "name": "nodejs-ledn-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "API to manage the existing accounts and transactions",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "ts-node-dev --respawn src/index.ts"
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.14",
+    "@types/jest": "^29.2.0",
+    "@types/supertest": "^2.0.12",
+    "jest": "^29.2.2",
+    "mongodb-memory-server": "^8.9.3",
+    "supertest": "^6.3.1",
+    "ts-jest": "^29.0.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.4"
   },
